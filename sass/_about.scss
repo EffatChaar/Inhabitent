@@ -1,0 +1,109 @@
+.page-id-34 {
+    .menu li a {
+        color: white;
+    }
+    .menu-main-menu-container {
+        width:40%;
+        padding-bottom: 0;
+        padding-top: 1rem;
+    }
+    #primary-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+    .header-nav {
+        background: transparent;
+        position: fixed;
+        display: flex;
+        z-index: 10;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 1rem;
+        .white-logo-header {
+            max-width: 3rem;
+            display: block;
+            margin-left: 15rem;
+        }
+        .green-logo-header {
+            display: none;
+        }
+    }
+    .search-submit {
+        color: white;
+    }
+    .header-nav img {
+        max-width: 3rem;
+    }
+    .main-navigation {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .entry-title {
+        color: white;
+        position: relative;
+        margin: auto;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-family: 'Novecentos', sans-serif;
+    }
+    .entry-content {
+        padding-top: 2rem;
+        text-align: center;
+        height: 70vh;
+        margin: auto;
+        max-width: 60%;
+    }
+    .entry-content h2 {
+        color: #2f1339;
+        font-family: 'Novecentos', sans-serif;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    .entry-content p {
+        margin: auto;
+    }
+    .p1 {
+        margin: auto;
+        text-align: center;
+    }
+    .site-footer {
+        bottom: 0;
+        height: 40vh;
+        background-image: url("../../assets/images/dark-wood.png");
+        color: #ffffff;
+        max-width: 100%;
+    }
+    .footer-logo img {
+        max-width: 17rem;
+        padding-top: 4rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact-info {
+        padding-top: 3rem;
+    }
+    .contact-info a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .contact-info h3 {
+        color: #d99054;
+    }
+    .business-hours {
+        padding-top: 3rem;
+    }
+    .business-hours h3 {
+        color: #d99054;
+    }
+    .copyright {
+        text-align: center;
+    }
+}

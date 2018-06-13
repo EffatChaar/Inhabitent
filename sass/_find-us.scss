@@ -1,0 +1,154 @@
+.page-template-page-find-us-php {
+    .menu li a {
+        color: #248a83;
+    }
+    .menu-main-menu-container {
+        width:30%;
+        padding-bottom: 0;
+        padding-top: 0.5rem;
+    }
+    #primary-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-nav {
+        background: rgba(white, 0.6);
+        position: fixed;
+        width: 100%;
+        margin-left: 50px;
+        padding-top: 1rem;
+        border-bottom: 1px solid #e1e1e1;
+        .green-logo-header {
+            max-width: 3rem;
+            display: block;
+            margin-left: 15rem;
+        }
+        .white-logo-header {
+            display: none;
+        } 
+    }
+    .main-navigation {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+    .entry-title {
+        color: black;
+    }
+    .site-content {
+        display: flex;
+        padding-top: 4.5rem;
+        margin-bottom: 4rem;
+    }
+    .content-area {
+        width: 1200px;
+        border-right: 1px solid #e1e1e1;
+        margin-left: 4rem;
+    }
+    .wp-menu-arrow h2 {
+        color: #2f1339;
+        font-size: 25px;
+    }
+    .wp-menu-arrow p {
+        color: #000000;
+        font-family: 'Merriweather', sans-serif;
+        font-size: 18px;
+    }
+    .wpcf7-form-control {
+        background-color: #f4f4f4;
+        border: 1px solid #e1e1e1;
+    }
+    .wpcf7-form label {
+        color: #2f1339;
+    }
+    .wpcf7-submit {
+        background-color: #248a83;
+        color: #ffffff;
+        box-shadow: none;
+        width: 100px;
+        height: 50px;
+        font-size: 17px;
+        font-weight: lighter;
+        
+    }
+    .widget-area {
+		width: 30%;
+		padding-top: 3rem;
+		padding-left: 2rem;
+		line-height: 2rem;
+	}
+	.widget_text {
+		padding-bottom: 2px;
+		p {
+			font-size: 20px;
+			font-family: 'Merriweather', sans-serif;
+		}
+	}
+	.contact-number {
+		text-decoration: none;
+		color: #248a83;
+	}
+	.contact-email {
+		text-decoration: none;
+		color: #248a83;
+	}
+	.tent-biz-hours-class {
+		padding-bottom: 2px;
+		p {
+			font-size: 20px;
+			font-family: 'Merriweather', sans-serif;
+		}
+		span {
+			font-weight: bold;
+		}
+	}
+	.widget_archive ul {
+		margin-left: 0;
+		list-style: none;
+	}
+	.widget_archive a {
+		text-decoration: none;
+		color: #248a83;
+		margin: -31px;
+		font-family: 'Merriweather', sans-serif;
+		font-size: 20px;
+	}
+	.site-footer {
+        bottom: 0;
+        height: 40vh;
+        background-image: url("../../assets/images/dark-wood.png");
+        color: #ffffff;
+        max-width: 100%;
+    }
+    .footer-logo img {
+        max-width: 17rem;
+        padding-top: 4rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact-info {
+		padding-top: 3rem;
+		a {
+			text-decoration: none;
+			color: #ffffff;
+		}
+		h3 {
+			color: #d99054;
+		}
+    }
+    .business-hours {
+		padding-top: 3rem;
+		h3 {
+			color: #d99054;
+		}
+    }
+    .copyright {
+        text-align: center;
+	}
+
+}
+
+

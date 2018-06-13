@@ -1,0 +1,98 @@
+.tax-product_type {
+	.menu li a {
+		color: #248a83;
+	}
+	.menu-main-menu-container {
+		width:30%;
+		padding-bottom: 0;
+		padding-top: 1rem;
+	}
+	#primary-menu {
+		display: flex;
+		justify-content: space-between;
+	}
+	.header-nav {
+		background: rgba(white, 0.6);
+		position: fixed;
+		width: 100%;
+		z-index: 10;
+		border-bottom: 1px solid #e1e1e1;
+		background: rgba(white, 0.6);
+		.green-logo-header {
+			display: block;
+			margin-left: 15rem;
+			max-width: 3rem;
+		}
+		.white-logo-header {
+			display: none;
+		}
+	}
+	.main-navigation {
+		display: flex;
+		justify-content: space-between;
+		height: 50px;
+		margin-bottom: 1rem;
+	}
+	.site-content {
+		padding-top : 5rem;
+	}
+	.page-header-container {
+		text-align: center;
+		padding-bottom: 3rem;
+		font-size: 20px;
+	}
+	.product-flex-container {
+		display: flex;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.product-flex-item {
+		border: 1px solid #e1e1e1;
+		margin: 10px;
+		height: 300px;
+		margin-bottom: 4rem;
+	}
+	.product-item-thumbnail img {
+		max-height: 250px;
+	}
+	.product-item-info {
+		display: flex;
+		align-items: baseline;
+	}
+
+	.site-footer {
+        bottom: 0;
+        height: 40vh;
+        background-image: url("../../assets/images/dark-wood.png");
+        color: #ffffff;
+        max-width: 100%;
+	}
+    .footer-logo img {
+        max-width: 17rem;
+        padding-top: 4rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact-info {
+        padding-top: 3rem;
+    }
+    .contact-info a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .contact-info h3 {
+        color: #d99054;
+    }
+    .business-hours {
+        padding-top: 3rem;
+    }
+    .business-hours h3 {
+        color: #d99054;
+    }
+    .copyright {
+        text-align: center;
+	}
+}

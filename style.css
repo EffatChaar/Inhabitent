@@ -1,0 +1,2688 @@
+/*!
+Theme Name: RED Starter Theme
+Theme URI: http://underscores.me/
+Author: RED Academy
+Author URI: http://www.redacademy.com
+Description: A WordPress starter theme for RED Academy students.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+RED Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Embedded Fonts
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Media
+	## Captions
+	## Galleries
+# Page Templates
+	## Front page
+--------------------------------------------------------------*/
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+/*
+* Merriweather
+*/
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../assets/fonts/Merriweather-Bold.eot");
+  src: url("../assets/fonts/Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Merriweather-Bold.woff2") format("woff2"), url("../assets/fonts/Merriweather-Bold.woff") format("woff"), url("../assets/fonts/Merriweather-Bold.ttf") format("truetype"), url("../assets/fonts/Merriweather-Bold.svg#Merriweather-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../assets/fonts/Merriweather-LightItalic.eot");
+  src: url("../assets/fonts/Merriweather-LightItalic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Merriweather-LightItalic.woff2") format("woff2"), url("../assets/fonts/Merriweather-LightItalic.woff") format("woff"), url("../assets/fonts/Merriweather-LightItalic.ttf") format("truetype"), url("../assets/fonts/Merriweather-LightItalic.svg#Merriweather-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../assets/fonts/Merriweather-Light.eot");
+  src: url("../assets/fonts/Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Merriweather-Light.woff2") format("woff2"), url("../assets/fonts/Merriweather-Light.woff") format("woff"), url("../assets/fonts/Merriweather-Light.ttf") format("truetype"), url("../assets/fonts/Merriweather-Light.svg#Merriweather-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../assets/fonts/Merriweather-BoldItalic.eot");
+  src: url("../assets/fonts/Merriweather-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Merriweather-BoldItalic.woff2") format("woff2"), url("../assets/fonts/Merriweather-BoldItalic.woff") format("woff"), url("../assets/fonts/Merriweather-BoldItalic.ttf") format("truetype"), url("../assets/fonts/Merriweather-BoldItalic.svg#Merriweather-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+/*
+* Novecentos
+*/
+@font-face {
+  font-family: 'Novecentos';
+  src: url("../assets/fonts/Novecentos-Normal.eot");
+  src: url("../assets/fonts/Novecentos-Normal.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Novecentos-Normal.woff2") format("woff2"), url("../assets/fonts/Novecentos-Normal.woff") format("woff"), url("../assets/fonts/Novecentos-Normal.ttf") format("truetype"), url("../assets/fonts/Novecentos-Normal.svg#.") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecentos';
+  src: url("../assets/fonts/Novecentos-DemiBold.eot");
+  src: url("../assets/fonts/Novecentos-DemiBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Novecentos-DemiBold.woff2") format("woff2"), url("../assets/fonts/Novecentos-DemiBold.woff") format("woff"), url("../assets/fonts/Novecentos-DemiBold.ttf") format("truetype"), url("../assets/fonts/Novecentos-DemiBold.svg#.") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecentos';
+  src: url("3193fb50b8e7cb8adad426f31bdb33a1.eot");
+  src: url("3193fb50b8e7cb8adad426f31bdb33a1.eot?#iefix") format("embedded-opentype"), url("3193fb50b8e7cb8adad426f31bdb33a1.woff2") format("woff2"), url("3193fb50b8e7cb8adad426f31bdb33a1.woff") format("woff"), url("3193fb50b8e7cb8adad426f31bdb33a1.ttf") format("truetype"), url("3193fb50b8e7cb8adad426f31bdb33a1.svg#.") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecentos';
+  src: url("4b2acfefd6ea448e954f98f1634426c9.eot");
+  src: url("4b2acfefd6ea448e954f98f1634426c9.eot?#iefix") format("embedded-opentype"), url("4b2acfefd6ea448e954f98f1634426c9.woff2") format("woff2"), url("4b2acfefd6ea448e954f98f1634426c9.woff") format("woff"), url("4b2acfefd6ea448e954f98f1634426c9.ttf") format("truetype"), url("4b2acfefd6ea448e954f98f1634426c9.svg#.") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  clear: both; }
+
+/* Copy */
+p {
+  margin-bottom: 1.5rem; }
+
+dfn, cite, em, i {
+  font-style: italic; }
+
+blockquote {
+  margin: 0 1.5rem; }
+
+address {
+  margin: 0 0 1.5rem; }
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6rem; }
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
+big {
+  font-size: 125%; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem; }
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */ }
+
+blockquote, q {
+  quotes: "" ""; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ""; }
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5rem; }
+
+ul, ol {
+  margin: 0 0 1.5rem 3rem; }
+
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5rem; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 1.5rem 1.5rem; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+table {
+  margin: 0 0 1.5rem;
+  width: 100%; }
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* Buttons */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6rem 1rem .4rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    border-color: #ccc #bbb #aaa;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+  button:active, button:focus,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="reset"]:active,
+  input[type="reset"]:focus,
+  input[type="submit"]:active,
+  input[type="submit"]:focus {
+    border-color: #aaa #bbb #bbb;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+
+/* Fields */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  textarea:focus {
+    color: #111; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+  padding: 3px; }
+
+textarea {
+  padding-left: 3px;
+  width: 100%; }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/* Links */
+a {
+  color: royalblue; }
+  a:visited {
+    color: purple; }
+  a:hover, a:focus, a:active {
+    color: midnightblue; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+/* Menus */
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%; }
+  .main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    .main-navigation ul ul {
+      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5rem;
+      left: -999rem;
+      z-index: 99999; }
+      .main-navigation ul ul ul {
+        left: -999rem;
+        top: 0; }
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
+        left: 100%; }
+      .main-navigation ul ul a {
+        width: 200px; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
+  .main-navigation li {
+    float: left;
+    position: relative; }
+  .main-navigation a {
+    display: block;
+    text-decoration: none; }
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block; }
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none; }
+  .main-navigation ul {
+    display: block; } }
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5rem;
+  overflow: hidden; }
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5rem; }
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5rem; }
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clearfix {
+  clear: both;
+  content: "";
+  display: table; }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5rem;
+  /* Make sure select elements fit in widgets. */ }
+  .widget select {
+    max-width: 100%; }
+
+/* Search widget. */
+.widget_search .search-submit {
+  display: none; }
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/* Posts and pages */
+.sticky {
+  display: block; }
+
+.hentry {
+  margin: 0 0 1.5rem; }
+
+.updated:not(.published) {
+  display: none; }
+
+.single .byline,
+.group-blog .byline {
+  display: inline; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5rem 0 0; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5rem; }
+
+/* Asides */
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none; }
+
+/* Comments */
+.comment-content a {
+  word-wrap: break-word; }
+
+.bypostauthor {
+  display: block; }
+
+.container-navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.menu-main-menu-container {
+  width: 30%; }
+
+.header-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin-right: 6rem; }
+
+.search-field {
+  display: none; }
+
+.search-submit {
+  margin-top: 0.7rem;
+  margin-left: 5px;
+  border: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #248a83; }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/* Captions */
+.wp-caption {
+  margin-bottom: 1.5rem;
+  max-width: 100%; }
+  .wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .wp-caption .wp-caption-text {
+    margin: 0.8075rem 0; }
+
+.wp-caption-text {
+  text-align: center; }
+
+/* Galleries*/
+.gallery {
+  margin-bottom: 1.5rem; }
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+.gallery-caption {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+/* Front page */
+.page-id-43 .menu li a {
+  color: white; }
+
+.page-id-43 #masthead {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.page-id-43 .container-navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.page-id-43 .menu-main-menu-container {
+  width: 30%; }
+
+.page-id-43 .header-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin-right: auto; }
+
+.page-id-43 .search-field {
+  display: none; }
+
+.page-id-43 .search-submit {
+  position: relative;
+  top: -12px;
+  margin-left: 5px;
+  border: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 2rem;
+  color: white;
+  margin-right: 1rem; }
+
+.page-id-43 #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.page-id-43 .header-nav {
+  background: transparent;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-top: 1rem; }
+  .page-id-43 .header-nav .white-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem; }
+  .page-id-43 .header-nav .green-logo-header {
+    display: none; }
+
+.page-id-43 .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem;
+  width: 100%; }
+
+.page-id-43 .front-page-main {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../assets/images/home-hero.jpg");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), url("../../assets/images/home-hero.jpg");
+  background-size: cover, cover;
+  width: 100%;
+  height: 100vh; }
+  .page-id-43 .front-page-main img {
+    position: relative;
+    top: 30%;
+    left: 40%; }
+
+.page-id-43 .shop-stuff {
+  margin-top: 4rem; }
+
+.page-id-43 .main-headings, .page-id-43 .inhabitent-journal h1, .page-id-43 .grid-post h1 {
+  text-align: center;
+  font-weight: lighter;
+  color: #2f1339;
+  font-size: 2.5rem; }
+
+.page-id-43 .shop-flex {
+  margin: auto;
+  width: 70rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.page-id-43 .product-flex {
+  border: 1px solid #e1e1e1;
+  border-top-width: 5px;
+  max-width: 23%;
+  margin-bottom: 4rem;
+  margin-top: 2rem; }
+  .page-id-43 .product-flex img {
+    max-width: 70px;
+    padding-top: 1rem; }
+  .page-id-43 .product-flex a {
+    text-decoration: none;
+    color: white;
+    background: #248a83;
+    font-weight: lighter;
+    cursor: pointer;
+    padding: 10px; }
+
+.page-id-43 .inhabitent-journal {
+  font-size: 1rem;
+  margin-bottom: 4rem; }
+
+.page-id-43 .inhabitent-journal h1 {
+  padding-bottom: 1rem; }
+
+.page-id-43 .journal-flex {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10%;
+  margin-left: 10%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem; }
+
+.page-id-43 .journal-item {
+  border: 1px solid #e1e1e1;
+  width: 30%;
+  height: 42vh; }
+  .page-id-43 .journal-item span {
+    font-size: 10px;
+    line-height: 1rem; }
+  .page-id-43 .journal-item img {
+    width: 100%;
+    height: 60%;
+    border-bottom: 5px solid #e1e1e1; }
+  .page-id-43 .journal-item h3 {
+    color: #248a83;
+    margin-left: 5px;
+    line-height: 1.5rem; }
+  .page-id-43 .journal-item a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 10px;
+    border: 1px solid #000000;
+    padding: 7px; }
+
+.page-id-43 .grid-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 2fr;
+  grid-gap: 20px 20px;
+  height: 66vh;
+  margin-left: 0;
+  padding-left: 0;
+  width: 100%; }
+
+.page-id-43 .item-one {
+  grid-column: 1/3;
+  grid-row: 1/3; }
+  .page-id-43 .item-one img {
+    max-height: 620px;
+    max-width: none;
+    position: absolute;
+    right: -36%;
+    bottom: -5%; }
+  .page-id-43 .item-one .main-title-grid {
+    font-size: 3rem;
+    font-weight: 100;
+    z-index: 2;
+    line-height: 1;
+    padding: 0;
+    margin-top: 1rem; }
+
+.page-id-43 .item-two {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2; }
+  .page-id-43 .item-two img {
+    max-height: 620px;
+    position: absolute;
+    bottom: -5%; }
+  .page-id-43 .item-two .main-title-grid {
+    font-size: 2.5rem;
+    font-weight: 100;
+    z-index: 2;
+    line-height: 1;
+    padding: 0;
+    margin-top: 1rem; }
+
+.page-id-43 .item-three {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3; }
+  .page-id-43 .item-three img {
+    max-height: 620px;
+    position: absolute;
+    max-width: 620px;
+    bottom: -10%;
+    right: -66%; }
+  .page-id-43 .item-three .main-title-grid {
+    font-size: 2rem;
+    font-weight: 100;
+    z-index: 2;
+    line-height: 1;
+    padding: -10%;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+
+.page-id-43 .item-four {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3; }
+  .page-id-43 .item-four img {
+    max-height: 620px;
+    position: absolute;
+    max-width: 620px;
+    bottom: -10%;
+    right: -66%; }
+  .page-id-43 .item-four .main-title-grid {
+    font-size: 1.8rem;
+    font-weight: 100;
+    z-index: 2;
+    line-height: 1;
+    margin-top: 1rem; }
+
+.page-id-43 .grid-item {
+  position: relative;
+  overflow: hidden; }
+
+.page-id-43 .thumbnail-grid-post {
+  background: rgba(0, 0, 0, 0.4);
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%; }
+
+.page-id-43 .title-grid-post {
+  position: absolute;
+  z-index: 2;
+  padding: 2rem; }
+  .page-id-43 .title-grid-post .main-title-grid {
+    font-family: 'Merriweather', sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white; }
+  .page-id-43 .title-grid-post a {
+    text-decoration: none;
+    color: white; }
+
+.page-id-43 .read-more-btn {
+  border: 1px solid white;
+  color: black;
+  background-color: transparent;
+  font-family: 'Novecentos', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 1.3rem;
+  font-size: 0.9rem; }
+
+.page-id-43 .last-section {
+  border: 1px solid #248a83;
+  background-color: #248a83;
+  width: 13rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 4rem; }
+  .page-id-43 .last-section a {
+    text-decoration: none;
+    font-weight: lighter;
+    color: white; }
+
+.page-id-43 .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.page-id-43 .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.page-id-43 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.page-id-43 .contact-info {
+  padding-top: 3rem; }
+
+.page-id-43 .contact-info a {
+  text-decoration: none;
+  color: #ffffff; }
+
+.page-id-43 .contact-info h3 {
+  color: #d99054; }
+
+.page-id-43 .business-hours {
+  padding-top: 3rem; }
+
+.page-id-43 .business-hours h3 {
+  color: #d99054; }
+
+.page-id-43 .copyright {
+  text-align: center; }
+
+.page-id-34 .menu li a {
+  color: white; }
+
+.page-id-34 .menu-main-menu-container {
+  width: 40%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.page-id-34 #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.page-id-34 .header-nav {
+  background: transparent;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-top: 1rem; }
+  .page-id-34 .header-nav .white-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem; }
+  .page-id-34 .header-nav .green-logo-header {
+    display: none; }
+
+.page-id-34 .search-submit {
+  color: white; }
+
+.page-id-34 .header-nav img {
+  max-width: 3rem; }
+
+.page-id-34 .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+
+.page-id-34 .entry-title {
+  color: white;
+  position: relative;
+  margin: auto;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+  font-family: 'Novecentos', sans-serif; }
+
+.page-id-34 .entry-content {
+  padding-top: 2rem;
+  text-align: center;
+  height: 70vh;
+  margin: auto;
+  max-width: 60%; }
+
+.page-id-34 .entry-content h2 {
+  color: #2f1339;
+  font-family: 'Novecentos', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase; }
+
+.page-id-34 .entry-content p {
+  margin: auto; }
+
+.page-id-34 .p1 {
+  margin: auto;
+  text-align: center; }
+
+.page-id-34 .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.page-id-34 .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.page-id-34 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.page-id-34 .contact-info {
+  padding-top: 3rem; }
+
+.page-id-34 .contact-info a {
+  text-decoration: none;
+  color: #ffffff; }
+
+.page-id-34 .contact-info h3 {
+  color: #d99054; }
+
+.page-id-34 .business-hours {
+  padding-top: 3rem; }
+
+.page-id-34 .business-hours h3 {
+  color: #d99054; }
+
+.page-id-34 .copyright {
+  text-align: center; }
+
+.page-template-page-find-us-php .menu li a {
+  color: #248a83; }
+
+.page-template-page-find-us-php .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 0.5rem; }
+
+.page-template-page-find-us-php #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.page-template-page-find-us-php .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  margin-left: 50px;
+  padding-top: 1rem;
+  border-bottom: 1px solid #e1e1e1; }
+  .page-template-page-find-us-php .header-nav .green-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem; }
+  .page-template-page-find-us-php .header-nav .white-logo-header {
+    display: none; }
+
+.page-template-page-find-us-php .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+  margin-bottom: 1rem; }
+
+.page-template-page-find-us-php .entry-title {
+  color: black; }
+
+.page-template-page-find-us-php .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4.5rem;
+  margin-bottom: 4rem; }
+
+.page-template-page-find-us-php .content-area {
+  width: 1200px;
+  border-right: 1px solid #e1e1e1;
+  margin-left: 4rem; }
+
+.page-template-page-find-us-php .wp-menu-arrow h2 {
+  color: #2f1339;
+  font-size: 25px; }
+
+.page-template-page-find-us-php .wp-menu-arrow p {
+  color: #000000;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 18px; }
+
+.page-template-page-find-us-php .wpcf7-form-control {
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1; }
+
+.page-template-page-find-us-php .wpcf7-form label {
+  color: #2f1339; }
+
+.page-template-page-find-us-php .wpcf7-submit {
+  background-color: #248a83;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 100px;
+  height: 50px;
+  font-size: 17px;
+  font-weight: lighter; }
+
+.page-template-page-find-us-php .widget-area {
+  width: 30%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  line-height: 2rem; }
+
+.page-template-page-find-us-php .widget_text {
+  padding-bottom: 2px; }
+  .page-template-page-find-us-php .widget_text p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+
+.page-template-page-find-us-php .contact-number {
+  text-decoration: none;
+  color: #248a83; }
+
+.page-template-page-find-us-php .contact-email {
+  text-decoration: none;
+  color: #248a83; }
+
+.page-template-page-find-us-php .tent-biz-hours-class {
+  padding-bottom: 2px; }
+  .page-template-page-find-us-php .tent-biz-hours-class p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+  .page-template-page-find-us-php .tent-biz-hours-class span {
+    font-weight: bold; }
+
+.page-template-page-find-us-php .widget_archive ul {
+  margin-left: 0;
+  list-style: none; }
+
+.page-template-page-find-us-php .widget_archive a {
+  text-decoration: none;
+  color: #248a83;
+  margin: -31px;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px; }
+
+.page-template-page-find-us-php .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.page-template-page-find-us-php .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.page-template-page-find-us-php .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.page-template-page-find-us-php .contact-info {
+  padding-top: 3rem; }
+  .page-template-page-find-us-php .contact-info a {
+    text-decoration: none;
+    color: #ffffff; }
+  .page-template-page-find-us-php .contact-info h3 {
+    color: #d99054; }
+
+.page-template-page-find-us-php .business-hours {
+  padding-top: 3rem; }
+  .page-template-page-find-us-php .business-hours h3 {
+    color: #d99054; }
+
+.page-template-page-find-us-php .copyright {
+  text-align: center; }
+
+.post-type-archive-product .menu li a {
+  color: #248a83; }
+
+.post-type-archive-product .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.post-type-archive-product #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.post-type-archive-product .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  z-index: 10; }
+  .post-type-archive-product .header-nav .green-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem; }
+  .post-type-archive-product .header-nav .white-logo-header {
+    display: none; }
+
+.post-type-archive-product .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+  .post-type-archive-product .main-navigation img {
+    margin-left: 6rem;
+    margin-top: 10px; }
+
+.post-type-archive-product .site-content {
+  position: relative;
+  padding-top: 35px; }
+
+.post-type-archive-product .content-area {
+  max-width: auto; }
+
+.post-type-archive-product .page-header {
+  padding-top: 4rem; }
+  .post-type-archive-product .page-header h1 {
+    text-align: center;
+    text-transform: uppercase; }
+
+.post-type-archive-product .contents-arrange {
+  margin: auto;
+  max-width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: 'Novecentos', sans-serif; }
+  .post-type-archive-product .contents-arrange p a {
+    text-decoration: none;
+    color: #248a83; }
+
+.post-type-archive-product .page-articles-products {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2rem;
+  border-top: 1px dashed #e1e1e1;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .post-type-archive-product .page-articles-products article {
+    border: 1px solid #e1e1e1;
+    max-width: 260px;
+    max-height: 300px;
+    margin: 10px; }
+  .post-type-archive-product .page-articles-products img {
+    height: 200px; }
+
+.post-type-archive-product .product-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.post-type-archive-product .entry-title {
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Merriweather', sans-serif; }
+
+.post-type-archive-product .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.post-type-archive-product .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.post-type-archive-product .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.post-type-archive-product .contact-info {
+  padding-top: 3rem; }
+  .post-type-archive-product .contact-info a {
+    text-decoration: none;
+    color: #ffffff; }
+  .post-type-archive-product .contact-info h3 {
+    color: #d99054; }
+
+.post-type-archive-product .business-hours {
+  padding-top: 3rem; }
+  .post-type-archive-product .business-hours h3 {
+    color: #d99054; }
+
+.post-type-archive-product .copyright {
+  text-align: center; }
+
+.single-product .menu li a {
+  color: #248a83; }
+
+.single-product .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.single-product #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.single-product .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  z-index: 10; }
+  .single-product .header-nav .green-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem; }
+  .single-product .header-nav .white-logo-header {
+    display: none; }
+
+.single-product .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+
+.single-product .site-content {
+  padding-top: 7rem; }
+
+.single-product .type-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.single-product .thumbnail-info {
+  width: 500px;
+  margin-left: 3rem;
+  margin-right: auto;
+  line-height: 2rem;
+  font-size: 20px; }
+
+.single-product .entry-header {
+  margin-left: auto;
+  width: 550px;
+  margin-bottom: 4rem; }
+
+.single-product .price-tag {
+  margin-bottom: 0;
+  font-family: 'Novecentos',sans-serif; }
+
+.single-product .entry-title {
+  color: #d99054;
+  font-size: 40px;
+  margin-top: 0; }
+
+.single-product .entry-content {
+  font-family: 'Merriweather', sans-serif; }
+
+.single-product .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.single-product .button {
+  background-color: white;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 100px;
+  margin-left: 6px; }
+  .single-product .button:hover {
+    background-color: #248a83; }
+
+.single-product .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.single-product .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.single-product .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.single-product .contact-info {
+  padding-top: 3rem; }
+
+.single-product .contact-info a {
+  text-decoration: none;
+  color: #ffffff; }
+
+.single-product .contact-info h3 {
+  color: #d99054; }
+
+.single-product .business-hours {
+  padding-top: 3rem; }
+
+.single-product .business-hours h3 {
+  color: #d99054; }
+
+.single-product .copyright {
+  text-align: center; }
+
+.search-results .menu li a {
+  color: #248a83; }
+
+.search-results .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.search-results #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.search-results .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  z-index: 10; }
+  .search-results .header-nav .green-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem;
+    padding-top: 1rem; }
+  .search-results .header-nav .white-logo-header {
+    display: none; }
+
+.search-results .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+
+.search-results .site-content {
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.search-results .content-area {
+  width: 900px;
+  margin-left: 30px;
+  margin-right: 5px;
+  border-right: 1px solid #e1e1e1; }
+
+.search-results .page-header {
+  text-transform: uppercase; }
+
+.search-results .black-btn {
+  border: 1px solid #000000;
+  padding: 1rem; }
+
+.search-results a.black-btn {
+  text-decoration: none;
+  color: #000000; }
+
+.search-results .entry-title a {
+  text-decoration: none;
+  color: #248a83;
+  text-transform: uppercase; }
+
+.search-results #post-49 {
+  display: none; }
+
+.search-results #post-83 {
+  display: none; }
+
+.search-results .widget-area {
+  width: 30%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  line-height: 2rem; }
+
+.search-results .widget_text {
+  padding-bottom: 2px; }
+  .search-results .widget_text p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+
+.search-results .contact-number {
+  text-decoration: none;
+  color: #248a83; }
+
+.search-results .contact-email {
+  text-decoration: none;
+  color: #248a83; }
+
+.search-results .tent-biz-hours-class {
+  padding-bottom: 2px; }
+  .search-results .tent-biz-hours-class p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+  .search-results .tent-biz-hours-class span {
+    font-weight: bold; }
+
+.search-results .widget_archive ul {
+  margin-left: 0;
+  list-style: none; }
+
+.search-results .widget_archive a {
+  text-decoration: none;
+  color: #248a83;
+  margin: -31px;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px; }
+
+.search-results .widget-title {
+  text-transform: uppercase; }
+
+.search-results .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.search-results .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.search-results .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.search-results .contact-info {
+  padding-top: 3rem; }
+  .search-results .contact-info a {
+    text-decoration: none;
+    color: #ffffff; }
+  .search-results .contact-info h3 {
+    color: #d99054; }
+
+.search-results .business-hours {
+  padding-top: 3rem; }
+  .search-results .business-hours h3 {
+    color: #d99054; }
+
+.search-results .copyright {
+  text-align: center; }
+
+.tag-photography .menu li a {
+  color: #248a83; }
+
+.tag-photography .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.tag-photography #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.tag-photography .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #e1e1e1;
+  background: rgba(255, 255, 255, 0.6); }
+  .tag-photography .header-nav .green-logo-header {
+    display: block;
+    margin-left: 15rem;
+    max-width: 3rem; }
+  .tag-photography .header-nav .white-logo-header {
+    display: none; }
+
+.tag-photography .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4rem; }
+
+.tag-photography .content-area {
+  border-right: 1px solid #e1e1e1;
+  width: 800px;
+  margin-left: 10rem; }
+
+.tag-photography .page-title {
+  text-transform: uppercase; }
+
+.tag-photography .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+
+.tag-photography .widget-area {
+  width: 30%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  line-height: 2rem; }
+
+.tag-photography .widget_text {
+  padding-bottom: 2px; }
+  .tag-photography .widget_text p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+
+.tag-photography .contact-number {
+  text-decoration: none;
+  color: #248a83; }
+
+.tag-photography .contact-email {
+  text-decoration: none;
+  color: #248a83; }
+
+.tag-photography .tent-biz-hours-class {
+  padding-bottom: 2px; }
+  .tag-photography .tent-biz-hours-class p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+  .tag-photography .tent-biz-hours-class span {
+    font-weight: bold; }
+
+.tag-photography .widget_archive ul {
+  margin-left: 0;
+  list-style: none; }
+
+.tag-photography .widget_archive a {
+  text-decoration: none;
+  color: #248a83;
+  margin: -31px;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px; }
+
+.tag-photography .widget-title {
+  text-transform: uppercase; }
+
+.tag-photography .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.tag-photography .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.tag-photography .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.tag-photography .contact-info {
+  padding-top: 3rem; }
+  .tag-photography .contact-info a {
+    text-decoration: none;
+    color: #ffffff; }
+  .tag-photography .contact-info h3 {
+    color: #d99054; }
+
+.tag-photography .business-hours {
+  padding-top: 3rem; }
+  .tag-photography .business-hours h3 {
+    color: #d99054; }
+
+.tag-photography .copyright {
+  text-align: center; }
+
+.category-contests .menu li a {
+  color: #248a83; }
+
+.category-contests .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.category-contests #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.category-contests .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #e1e1e1;
+  background: rgba(255, 255, 255, 0.6); }
+  .category-contests .header-nav .green-logo-header {
+    display: block;
+    margin-left: 15rem;
+    max-width: 3rem; }
+  .category-contests .header-nav .white-logo-header {
+    display: none; }
+
+.category-contests .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+
+.category-contests .page-header {
+  padding-top: 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 2rem;
+  font-size: 1.2rem; }
+
+.category-contests .site-content {
+  padding-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.category-contests .site-main {
+  width: 800px;
+  margin-left: 4rem;
+  margin-right: 3rem;
+  border-right: 1px solid #e1e1e1; }
+
+.category-contests .entry-header {
+  position: relative; }
+
+.category-contests .entry-title {
+  position: relative;
+  top: 3rem;
+  background-color: #248a83;
+  font-size: 2rem;
+  height: auto;
+  width: 30rem; }
+  .category-contests .entry-title a {
+    text-decoration: none;
+    color: #ffffff; }
+
+.category-contests .entry-meta {
+  position: relative;
+  top: 25.8rem;
+  right: 10rem;
+  color: #ffffff;
+  background-color: #248a83; }
+
+.category-contests .read-more {
+  border: 1px solid #000000;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #000000; }
+
+.category-contests .widget-area {
+  width: 30%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  line-height: 2rem; }
+
+.category-contests .widget_text {
+  padding-bottom: 2px; }
+  .category-contests .widget_text p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+
+.category-contests .contact-number {
+  text-decoration: none;
+  color: #248a83; }
+
+.category-contests .contact-email {
+  text-decoration: none;
+  color: #248a83; }
+
+.category-contests .tent-biz-hours-class {
+  padding-bottom: 2px; }
+  .category-contests .tent-biz-hours-class p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+  .category-contests .tent-biz-hours-class span {
+    font-weight: bold; }
+
+.category-contests .widget_archive ul {
+  margin-left: 0;
+  list-style: none; }
+
+.category-contests .widget_archive a {
+  text-decoration: none;
+  color: #248a83;
+  margin: -31px;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px; }
+
+.category-contests .widget-title {
+  text-transform: uppercase; }
+
+.category-contests .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.category-contests .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.category-contests .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.category-contests .contact-info {
+  padding-top: 3rem; }
+  .category-contests .contact-info a {
+    text-decoration: none;
+    color: #ffffff; }
+  .category-contests .contact-info h3 {
+    color: #d99054; }
+
+.category-contests .business-hours {
+  padding-top: 3rem; }
+  .category-contests .business-hours h3 {
+    color: #d99054; }
+
+.category-contests .copyright {
+  text-align: center; }
+
+.tax-product_type .menu li a {
+  color: #248a83; }
+
+.tax-product_type .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.tax-product_type #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.tax-product_type .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #e1e1e1;
+  background: rgba(255, 255, 255, 0.6); }
+  .tax-product_type .header-nav .green-logo-header {
+    display: block;
+    margin-left: 15rem;
+    max-width: 3rem; }
+  .tax-product_type .header-nav .white-logo-header {
+    display: none; }
+
+.tax-product_type .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+
+.tax-product_type .site-content {
+  padding-top: 5rem; }
+
+.tax-product_type .page-header-container {
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: 20px; }
+
+.tax-product_type .product-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.tax-product_type .product-flex-item {
+  border: 1px solid #e1e1e1;
+  margin: 10px;
+  height: 300px;
+  margin-bottom: 4rem; }
+
+.tax-product_type .product-item-thumbnail img {
+  max-height: 250px; }
+
+.tax-product_type .product-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
+
+.tax-product_type .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.tax-product_type .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.tax-product_type .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.tax-product_type .contact-info {
+  padding-top: 3rem; }
+
+.tax-product_type .contact-info a {
+  text-decoration: none;
+  color: #ffffff; }
+
+.tax-product_type .contact-info h3 {
+  color: #d99054; }
+
+.tax-product_type .business-hours {
+  padding-top: 3rem; }
+
+.tax-product_type .business-hours h3 {
+  color: #d99054; }
+
+.tax-product_type .copyright {
+  text-align: center; }
+
+.post-template-default .menu li a {
+  color: #248a83; }
+
+.post-template-default .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.post-template-default #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.post-template-default .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #e1e1e1;
+  background: rgba(255, 255, 255, 0.6); }
+  .post-template-default .header-nav .green-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem;
+    padding-top: 1rem; }
+  .post-template-default .header-nav .white-logo-header {
+    display: none; }
+
+.post-template-default .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+
+.post-template-default .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.post-template-default .content-area {
+  max-width: 66%;
+  margin-left: 5%;
+  margin-right: auto;
+  border-right: 1px solid #e1e1e1; }
+
+.post-template-default .type-post {
+  padding-top: 3rem; }
+
+.post-template-default .entry-header {
+  position: relative; }
+
+.post-template-default .entry-title {
+  font-size: 33px;
+  background-color: #248a83;
+  position: relative;
+  top: -26rem;
+  width: 28rem;
+  color: white; }
+
+.post-template-default .entry-meta {
+  background-color: #248a83;
+  position: relative;
+  color: white;
+  top: -8rem;
+  left: 19rem;
+  width: 21rem; }
+  .post-template-default .entry-meta a {
+    color: white; }
+
+.post-template-default .button {
+  background-color: white;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 100px;
+  margin-left: 6px; }
+  .post-template-default .button:hover {
+    background-color: #248a83; }
+
+.post-template-default .cat-links a, .post-template-default .tags-links a {
+  text-decoration: none;
+  color: #248a83; }
+
+.post-template-default .comment-metadata a {
+  text-decoration: none;
+  color: #248a83; }
+
+.post-template-default .comment-reply-link {
+  text-decoration: none;
+  color: #248a83; }
+
+.post-template-default .widget-area {
+  width: 30%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  line-height: 2rem; }
+
+.post-template-default .widget_text {
+  padding-bottom: 2px; }
+  .post-template-default .widget_text p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+
+.post-template-default .contact-number {
+  text-decoration: none;
+  color: #248a83; }
+
+.post-template-default .contact-email {
+  text-decoration: none;
+  color: #248a83; }
+
+.post-template-default .tent-biz-hours-class {
+  padding-bottom: 2px; }
+  .post-template-default .tent-biz-hours-class p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+  .post-template-default .tent-biz-hours-class span {
+    font-weight: bold; }
+
+.post-template-default .widget_archive ul {
+  margin-left: 0;
+  list-style: none; }
+
+.post-template-default .widget_archive a {
+  text-decoration: none;
+  color: #248a83;
+  margin: -31px;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px; }
+
+.post-template-default .widget-title {
+  text-transform: uppercase; }
+
+.post-template-default .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.post-template-default .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.post-template-default .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.post-template-default .contact-info {
+  padding-top: 3rem; }
+  .post-template-default .contact-info a {
+    text-decoration: none;
+    color: #ffffff; }
+  .post-template-default .contact-info h3 {
+    color: #d99054; }
+
+.post-template-default .business-hours {
+  padding-top: 3rem; }
+  .post-template-default .business-hours h3 {
+    color: #d99054; }
+
+.post-template-default .copyright {
+  text-align: center; }
+
+.blog .menu li a {
+  color: #248a83; }
+
+.blog .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.blog #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.blog .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #e1e1e1;
+  background: rgba(255, 255, 255, 0.6); }
+  .blog .header-nav .green-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem; }
+  .blog .header-nav .white-logo-header {
+    display: none; }
+
+.blog .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+
+.blog .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.blog .site-main {
+  padding-top: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-left: 3rem; }
+
+.blog .content-area {
+  max-width: 70%;
+  border-right: 1px solid #e1e1e1; }
+
+.blog .entry-header {
+  position: relative;
+  margin-bottom: 3rem; }
+
+.blog .entry-title {
+  position: relative;
+  font-size: 33px;
+  background-color: #248a83;
+  z-index: 10; }
+  .blog .entry-title a {
+    text-decoration: none;
+    color: white; }
+
+.blog .entry-meta {
+  position: relative;
+  background-color: #248a83;
+  color: white; }
+
+.blog .widget-area {
+  width: 30%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  line-height: 2rem; }
+
+.blog .widget_text {
+  padding-bottom: 2px; }
+  .blog .widget_text p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+
+.blog .contact-number {
+  text-decoration: none;
+  color: #248a83; }
+
+.blog .contact-email {
+  text-decoration: none;
+  color: #248a83; }
+
+.blog .tent-biz-hours-class {
+  padding-bottom: 2px; }
+  .blog .tent-biz-hours-class p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+  .blog .tent-biz-hours-class span {
+    font-weight: bold; }
+
+.blog .widget_archive ul {
+  margin-left: 0;
+  list-style: none; }
+
+.blog .widget_archive a {
+  text-decoration: none;
+  color: #248a83;
+  margin: -31px;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px; }
+
+.blog .widget-title {
+  text-transform: uppercase; }
+
+.blog .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.blog .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.blog .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.blog .contact-info {
+  padding-top: 3rem; }
+  .blog .contact-info a {
+    text-decoration: none;
+    color: #ffffff; }
+  .blog .contact-info h3 {
+    color: #d99054; }
+
+.blog .business-hours {
+  padding-top: 3rem; }
+  .blog .business-hours h3 {
+    color: #d99054; }
+
+.blog .copyright {
+  text-align: center; }
+
+.error404 .menu li a {
+  color: #248a83; }
+
+.error404 .menu-main-menu-container {
+  width: 30%;
+  padding-bottom: 0;
+  padding-top: 1rem; }
+
+.error404 #primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.error404 .header-nav {
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  z-index: 10; }
+  .error404 .header-nav .green-logo-header {
+    max-width: 3rem;
+    display: block;
+    margin-left: 15rem; }
+  .error404 .header-nav .white-logo-header {
+    display: none; }
+
+.error404 .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  margin-bottom: 1rem; }
+  .error404 .main-navigation img {
+    margin-left: 6rem;
+    margin-top: 10px; }
+
+.error404 .site-content {
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.error404 .content-area {
+  width: 800px;
+  margin-left: 50px;
+  margin-right: 20px;
+  border-right: 1px solid #e1e1e1; }
+
+.error404 .page-header {
+  text-transform: uppercase;
+  font-size: 20px; }
+
+.error404 .page-content p {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 19px; }
+
+.error404 fieldset {
+  border: 0; }
+
+.error404 .search-submit {
+  display: none; }
+
+.error404 .widget_recent_entries ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  padding-left: 0; }
+  .error404 .widget_recent_entries ul li a {
+    text-decoration: none;
+    color: #248a83; }
+
+.error404 .widget_categories ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0; }
+  .error404 .widget_categories ul li a {
+    text-decoration: none;
+    color: #248a83; }
+
+.error404 .widget-area {
+  width: 30%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  line-height: 2rem; }
+
+.error404 .widget_text {
+  padding-bottom: 2px; }
+  .error404 .widget_text p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+
+.error404 .contact-number {
+  text-decoration: none;
+  color: #248a83; }
+
+.error404 .contact-email {
+  text-decoration: none;
+  color: #248a83; }
+
+.error404 .tent-biz-hours-class {
+  padding-bottom: 2px; }
+  .error404 .tent-biz-hours-class p {
+    font-size: 20px;
+    font-family: 'Merriweather', sans-serif; }
+  .error404 .tent-biz-hours-class span {
+    font-weight: bold; }
+
+.error404 .widget_archive ul {
+  margin-left: 0;
+  list-style: none; }
+
+.error404 .widget_archive a {
+  text-decoration: none;
+  color: #248a83;
+  margin: -31px;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px; }
+
+.error404 .widget-title {
+  text-transform: uppercase; }
+
+.error404 .site-footer {
+  bottom: 0;
+  height: 40vh;
+  background-image: url("../../assets/images/dark-wood.png");
+  color: #ffffff;
+  max-width: 100%; }
+
+.error404 .footer-logo img {
+  max-width: 17rem;
+  padding-top: 4rem; }
+
+.error404 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.error404 .contact-info {
+  padding-top: 3rem; }
+  .error404 .contact-info a {
+    text-decoration: none;
+    color: #ffffff; }
+  .error404 .contact-info h3 {
+    color: #d99054; }
+
+.error404 .business-hours {
+  padding-top: 3rem; }
+  .error404 .business-hours h3 {
+    color: #d99054; }
+
+.error404 .copyright {
+  text-align: center; }
