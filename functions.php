@@ -89,6 +89,8 @@ function inhabitent_scripts() {
 
 	wp_enqueue_script( 'inhabitent-script', get_template_directory_uri() . '/build/js/inhabitent-script.min.js', array('jquery'), '', true );
 
+	/* write the font awesome link here*/
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
